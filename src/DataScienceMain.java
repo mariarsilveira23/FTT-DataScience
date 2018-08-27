@@ -4,7 +4,7 @@ import java.io.FileReader;
 
 public class DataScienceMain {
 	public static void main(String[] args) {
-		File file = new File("Z:\\LPII\\.csv");
+		File file = new File("Z:\\LPII\\TechCrunchcontinentalUSA.csv");
 		
 		try {
 		BufferedReader br = new BufferedReader(new FileReader(file));
