@@ -29,8 +29,7 @@ public class Startup {
 	}
 	
 	public String setNumEmps(String numEmps) {
-		
-		
+				
 	}
 	
 	public void setNumEmps(int numEmps) {
