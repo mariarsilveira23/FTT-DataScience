@@ -1,4 +1,7 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class Startup {
 	private String permalink;
@@ -68,14 +71,20 @@ public class Startup {
 		return fundedDate;
 	}
 
-	public void setFundedDate(Date fundedDate) {
-		this.fundedDate = fundedDate;
+	public void setFundedDate(String fundedDate) throws ParseException {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+		Date date = formatter.parse(fundedDate);
+		this.fundedDate = date;
 	}
 
 	public int getRaisedAmt() {
 		return raisedAmt;
 	}
 
+	public void setRaisedAmt(String raisedAmt) {
+		this.setRaisedAmt(Integer.valueOf(raisedAmt));
+	}
+	
 	public void setRaisedAmt(int raisedAmt) {
 		this.raisedAmt = raisedAmt;
 	}
